@@ -5,7 +5,7 @@ from pathlib import Path
 
 project = Path(__file__).resolve().parent.parent
 suite = json.loads((project / "skill-tests/cases.json").read_text(encoding="utf-8"))
-skill_root = project / "cainiao-self"
+skill_root = project / "lzy-self"
 skill = (skill_root / "SKILL.md").read_text(encoding="utf-8")
 match = re.match(r"\A---\r?\n(.*?)\r?\n---\r?\n", skill, re.S)
 assert match, "Missing frontmatter"

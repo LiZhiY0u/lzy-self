@@ -2,11 +2,11 @@
 
 将个人明确认可的协作要求、技术学习方式和工程判断方法整理为可加载的 Agent Skill。
 
-本仓库的技能名称为 `cainiao-self`。它帮助 AI 在技术讨论、学习指导、工程联调和复盘中遵循作者确认的工作方式。这里的“蒸馏”指从材料中提炼、核对和维护规则；当前版本是指令与参考文档，不涉及模型训练。
+本仓库的技能名称为 `lzy-self`。它帮助 AI 在技术讨论、学习指导、工程联调和复盘中遵循作者确认的工作方式。这里的“蒸馏”指从材料中提炼、核对和维护规则；当前版本是指令与参考文档，不涉及模型训练。
 
 **当前阶段：规则与示例方案已由作者核对，结构检查通过；20 个行为测试用例尚未执行。**
 
-[技能入口](cainiao-self/SKILL.md) · [确认依据](cainiao-self/references/confirmed-rules.md) · [测试方案](skill-tests/测试方案.md) · [测试结果](skill-tests/results.md)
+[技能入口](lzy-self/SKILL.md) · [确认依据](lzy-self/references/confirmed-rules.md) · [测试方案](skill-tests/测试方案.md) · [测试结果](skill-tests/results.md)
 
 ## 适用场景
 
@@ -38,7 +38,7 @@
 lzy-self/
 ├── README.md
 ├── .gitignore
-├── cainiao-self/
+├── lzy-self/
 │   ├── SKILL.md
 │   └── references/
 │       └── confirmed-rules.md
@@ -66,24 +66,24 @@ lzy-self/
 ```powershell
 git clone https://github.com/LiZhiY0u/lzy-self.git lzy-self-source
 
-$skillTarget = Join-Path (Get-Location) '.agents/skills/cainiao-self'
+$skillTarget = Join-Path (Get-Location) '.agents/skills/lzy-self'
 if (Test-Path -LiteralPath $skillTarget) {
     throw '目标 skill 已存在，请先核对内容，避免覆盖。'
 }
 New-Item -ItemType Directory -Path '.agents/skills' -Force | Out-Null
-Copy-Item -LiteralPath './lzy-self-source/cainiao-self' -Destination $skillTarget -Recurse
+Copy-Item -LiteralPath './lzy-self-source/lzy-self' -Destination $skillTarget -Recurse
 ```
 
-复制后以 `$cainiao-self` 显式调用。若宿主未显示新技能，按其官方说明刷新或重启。复制安装不会自动同步仓库后续更新；更新前应检查版本差异和本地定制。
+复制后以 `$lzy-self` 显式调用。若宿主未显示新技能，按其官方说明刷新或重启。复制安装不会自动同步仓库后续更新；更新前应检查版本差异和本地定制。
 
-已有源码时，只需将其中的 `cainiao-self/` 文件夹复制到目标位置，不必再次克隆。
+已有源码时，只需将其中的 `lzy-self/` 文件夹复制到目标位置，不必再次克隆。
 
 ### 直接加载文件
 
 尚未安装时，可以向允许读取项目文件的 AI 提供：
 
 ```text
-请读取本项目 cainiao-self/SKILL.md，按其中已确认的方法协助本次任务。
+请读取本项目 lzy-self/SKILL.md，按其中已确认的方法协助本次任务。
 本次目标是：……
 执行范围和约束是：……
 ```
@@ -97,7 +97,7 @@ Copy-Item -LiteralPath './lzy-self-source/cainiao-self' -Destination $skillTarge
 **新技术学习**
 
 ```text
-$cainiao-self
+$lzy-self
 我第一次接触某项 MCU 技术。先给出第一轮学习安排，包含最小运行系统、
 原理与功能解析、示例评价和迁移检验。先检查已有环境，不安装新工具。
 ```
@@ -105,7 +105,7 @@ $cainiao-self
 **通信联调**
 
 ```text
-$cainiao-self
+$lzy-self
 MCU 和上位机偶尔连接失败。请设计两端冒烟测试与最小联调用例，
 说明所需协议资料，并提供过程数据记录模板。还没有测试结果。
 ```
@@ -113,7 +113,7 @@ MCU 和上位机偶尔连接失败。请设计两端冒烟测试与最小联调�
 **方案取舍**
 
 ```text
-$cainiao-self
+$lzy-self
 请比较保持现有组件版本和升级版本两条路线，说明优缺点、开发流程、
 实现细节与测试验收。升级前先讨论，暂不修改依赖。
 ```
