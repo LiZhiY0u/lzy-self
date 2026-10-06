@@ -33,4 +33,4 @@ record = (project / "skill-tests/results.md").read_text(encoding="utf-8")
 assert all(f"| {case_id} |" in record for case_id in ids), "Missing result row"
 print(f"STRUCTURE PASS: {len(ids)} cases cover {len(covered)}/{len(expected)} registered rule groups.")
 print(f"Critical cases: {sum(case['critical'] for case in suite['cases'])}")
-print("BEHAVIOR NOT RUN: no conclusion about skill effectiveness or trigger reliability.")
+print("STRUCTURE ONLY: behavioral evidence is recorded separately in results.md and run reports.")

@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-06",
+  "timezone": "Asia/Shanghai",
+  "baseline_commit": "a555b24a1326ce4b0c693f90f8c87f5eabd51178",
+  "baseline_skill_sha256": "468441992A8912617EB301CA09D96C2C3D7C63E1A1DCC41B1A8F4D0C059CD460",
+  "retest_skill_sha256": "B3FD4302386A7CC7C1A15B4A53C2CCAFAC51723405E0ED74D820268C543EBED3",
+  "context": "fork_turns=none",
+  "grading": "primary_agent_manual",
+  "control_group": false,
+  "full_tool_trace_exported": false,
+  "first_round": {
+    "T01": "pass",
+    "T13": "pass",
+    "T14": "pass",
+    "T10": "fail",
+    "T03": "pass"
+  },
+  "retest": {
+    "T10": "pass"
+  },
+  "remaining_not_run": 15,
+  "new_revision_regression_done": false
+}

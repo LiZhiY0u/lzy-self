@@ -1,0 +1,3 @@
+# Preserve bytes used by the evaluation SHA-256 records.
+/lzy-self/SKILL.md -text
+/skill-tests/runs/** -text
